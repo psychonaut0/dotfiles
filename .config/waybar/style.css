@@ -1,0 +1,95 @@
+@import url('/home/psy/.cache/wal/colors-waybar.css');
+
+* {
+  border: none;
+  font-family: Gintronic, Font Awesome, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0dcd0;
+}
+
+window {
+/*font-weight: bold;*/
+}
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+}
+/*-----module groups----*/
+.modules-right {
+/* background-color: rgba(11,15,24,0.85); */
+margin: 12px 22px;
+}
+.modules-center {
+  /* background-color: rgba(11,15,24,0.85); */
+  margin: 12px 22px;
+}
+.modules-left {
+  /* background-color: rgba(11,15,24,0.85); */
+  margin: 12px 22px;
+}
+/*-----modules indv----*/
+#workspaces button {
+  padding: 1px 5px;
+  background-color: transparent;
+}
+#workspaces button:hover {
+  box-shadow: inherit;
+  background-color: rgba(0,153,153,1);
+}
+
+#workspaces button.focused {
+background-color: rgba(0,43,51,0.85);
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#custom-power,
+#custom-menu,
+#idle_inhibitor, 
+#window,
+#backlight,
+#workspaces
+{
+  padding: 4px 18px;
+  margin: 6px 10px;
+  background: #0b0f18;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #e0dcd0;
+  border: 2px solid #e0dcd0;
+}
+#mode {
+  color: #cc3436;
+  font-weight: bold;
+}
+
+
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+  color: #2dcc36;
+}
+#pulseaudio.muted {
+  color: #cc3436;
+}
+#battery.charging {
+background: #316331;
+}
+#battery.warning:not(.charging) {
+background: #9e5b2e;
+
+}
+#battery.critical:not(.charging) {
+  
+  background: rgba(0,0,0,0);
+}
+#temperature.critical {
+  color: #cc3436;
+  background: rgba(0,0,0,0);
+}
